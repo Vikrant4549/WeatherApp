@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Weather Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='styles/home.css')}}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+<img src="{{url_for('static',filename='fantasy.jpg')}}" style= "width: 100%; height: 100%; position: relative; ">
+
+</head>
+<body>
+ 
+ <div class="mini-container">
+  <h2>Weather Dashboard</h2>
+  
+  <form class="weatherText" id="weatherForm" action="{{url_for('render_results')}}" method="post"> 
+  
+    Country Code:</br><input class="weatherText" id="weatherInput" type="text" placeholder="Enter country code eg. us" name="countryCode"</br></br>
+	
+    Location Zip Code:</br><input class="weatherText" id="weatherInput" type="text" placeholder="Enter your city code" name="zipCode"></br>
+	
+    <input class="weatherText" id="weatherSubmit" type="submit" value="Submit">
+	
+	</div>
+  </form>
+ </div>
+</body>
+</html>
